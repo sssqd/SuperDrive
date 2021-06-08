@@ -20,7 +20,7 @@ namespace SuperDrive
         ImageBrush CoinPicture = new ImageBrush();
         Rect UserHitBox;
 
-        int speed = 15; //спиды
+        int speed = 15; 
         int userSpeed = 10;
         int numberCar;
         int coinCounter = 10;
