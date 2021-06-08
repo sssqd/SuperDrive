@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuperDrive"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="500">
+        Title="MainWindow" Height="700" Width="500">
     <Canvas Background="#FF9C9C9C" Name="MyCanvas" Focusable="True" KeyDown="MyKeyDown" KeyUp="MyKeyUp">
-        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="155" />
-        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="484" />
-        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="324" />
-        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="-16" />
+        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="342" />
+        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="623" />
+        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="480" />
+        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="-81" />
+        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="192" />
+        <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="52" />
         <Rectangle Tag="Car" Height="125" Width="76" Fill="Purple" Canvas.Left="132" />
         <Rectangle Tag="Car" Height="125" Width="75" Fill="Yellow" Canvas.Left="51" Canvas.Top="344"  />
         <Rectangle Tag="Car" Height="125" Width="74" Fill="Red" Canvas.Left="351" Canvas.Top="244"  />
-        <Rectangle Name="User" Width="60" Height="110" Fill="Cyan" Canvas.Left="222" Canvas.Top="474" />
+        <Rectangle Name="User" Width="60" Height="110" Fill="Cyan" Canvas.Left="328" Canvas.Top="549" />
         <Label Name="Timer" Content="ЧТО-ТО ЗАДУМАНО" FontSize="16" Canvas.Top="3" />
         <!--создать отдельно панель в гриде-->
 

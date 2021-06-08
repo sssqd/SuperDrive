@@ -37,6 +37,7 @@ namespace SuperDrive
         double score;
         double i;
         bool Left, Right, GameOver, PowerMode;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -62,7 +63,7 @@ namespace SuperDrive
             }
             if (coinCounter < 1)
             {
-                MakeStart();
+                MakeCoin();
                 coinCounter = random.Next(600, 900);
             }
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
@@ -120,7 +121,7 @@ namespace SuperDrive
             }
             else
             {
-                UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Cyan.png"));
+                UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Cyan.png"));
                 MyCanvas.Background = Brushes.Gray;
             }
             foreach (Rectangle y in ItemRemove)
@@ -189,16 +190,18 @@ namespace SuperDrive
 
             score = 0;
             Timer.Content = "Таймер: 0 cек";
-            UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Cyan.png"));
-            CoinPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Coin.png"));
+            //C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/ - 1каб
+            //C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/ - монё
+            UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Cyan.png"));
+            CoinPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Coin.png"));
             User.Fill = UserPicture;
             MyCanvas.Background = Brushes.Gray;
             foreach(var x in MyCanvas.Children.OfType<Rectangle>())
             {
                 if((string)x.Tag == "Car")
                 {
-                    Canvas.SetTop(x, (random.Next(100, 400)* -1));
-                    Canvas.SetLeft(x, random.Next(0, 430));
+                    Canvas.SetTop(x, (random.Next(0, 0)* -1));
+                    Canvas.SetLeft(x, random.Next(0, 530));
                     ChangeCars(x);
                
                 }
@@ -217,18 +220,27 @@ namespace SuperDrive
             switch (numberCar)
             {
                 case 1:
-                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Purple.png"));
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Purple.png"));
                     break;
                 case 2:
-                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Rad.png"));
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Rad.png"));
                     break;
                 case 3:
-                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Yellow.png"));
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Yellow.png"));
+                    break;
+                case 4:
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Seroburomaline.png"));
+                    break;
+                case 5:
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Wheat.png"));
+                    break;
+                case 6:
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Green.png"));
                     break;
             }
             car.Fill = carPicture;
-            Canvas.SetTop(car, (random.Next(100, 400)));
-            Canvas.SetLeft(car, random.Next(0, 430));
+            Canvas.SetTop(car, (random.Next(0, 0)));
+            Canvas.SetLeft(car, random.Next(0, 530));
         }
 
         private void PowerUp() //перенести в отдельный класс
@@ -241,19 +253,19 @@ namespace SuperDrive
             switch (i)
             {
                 case 1:
-                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Purple.png"));
+                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Purple.png"));
                     break;
                 case 2:
-                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Rad.png"));
+                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Rad.png"));
                     break;
                 case 3:
-                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Yellow.png"));
+                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/User/source/repos/SuperDrive/SuperDrive/Picture/Yellow.png"));
                     break;
             }
             MyCanvas.Background = Brushes.Lime;
         }
 
-        private void MakeStart() //перенести в отдельный класс
+        private void MakeCoin() //перенести в отдельный класс
         {
             Rectangle newCoin = new Rectangle
             {
@@ -262,8 +274,8 @@ namespace SuperDrive
                 Tag = "Coin",
                 Fill = CoinPicture
             };
-            Canvas.SetLeft(newCoin, random.Next(0, 430));
-            Canvas.SetTop(newCoin, (random.Next(100, 400) * -1));
+            Canvas.SetLeft(newCoin, random.Next(0, 530));
+            Canvas.SetTop(newCoin, (random.Next(0, 0) * -1));
             MyCanvas.Children.Add(newCoin);
         }
     }
