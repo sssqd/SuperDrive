@@ -14,7 +14,7 @@
         <Rectangle Tag="Car" Height="125" Width="76" Fill="Purple" Canvas.Left="132" />
         <Rectangle Tag="Car" Height="125" Width="75" Fill="Yellow" Canvas.Left="51" Canvas.Top="344"  />
         <Rectangle Tag="Car" Height="125" Width="74" Fill="Red" Canvas.Left="351" Canvas.Top="244"  />
-        <Rectangle Tag="User" Width="60" Height="110" Fill="Cyan" Canvas.Left="222" Canvas.Top="474" />
+        <Rectangle Name="User" Width="60" Height="110" Fill="Cyan" Canvas.Left="222" Canvas.Top="474" />
         <Label Name="Timer" Content="ЧТО-ТО ЗАДУМАНО" FontSize="16" Canvas.Top="3" />
         <!--создать отдельно панель в гриде-->
 
