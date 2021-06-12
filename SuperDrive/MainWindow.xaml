@@ -11,10 +11,10 @@
         <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="484" />
         <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="324" />
         <Rectangle Width="20" Height="100" Fill="White" Tag="Markup" Canvas.Left="240" Canvas.Top="-16" />
-        <Rectangle Tag="Car" Height="125" Width="76" Fill="Purple" Canvas.Left="132" />
-        <Rectangle Tag="Car" Height="125" Width="75" Fill="Yellow" Canvas.Left="51" Canvas.Top="344"  />
-        <Rectangle Tag="Car" Height="125" Width="74" Fill="Red" Canvas.Left="351" Canvas.Top="244"  />
-        <Rectangle Name="User" Width="60" Height="110" Fill="Cyan" Canvas.Left="222" Canvas.Top="474" />
+        <Rectangle Tag="Car" Height="125" Width="76" Fill="Purple" Canvas.Left="42" />
+        <Rectangle Tag="Car" Height="125" Width="75" Fill="Yellow" Canvas.Left="222" Canvas.Top="3"  />
+        <Rectangle Tag="Car" Height="125" Width="74" Fill="Red" Canvas.Left="393"  />
+        <Rectangle Name="User" Width="60" Height="110" Fill="Cyan" Canvas.Left="222" Canvas.Top="464" />
         <Label Name="Timer" Content="ЧТО-ТО ЗАДУМАНО" FontSize="16" Canvas.Top="3" />
         <!--создать отдельно панель в гриде-->
 
