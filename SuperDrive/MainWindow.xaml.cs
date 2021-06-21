@@ -50,13 +50,13 @@ namespace SuperDrive
         {
             score += .05;
             coinCounter -= 1;
-            Timer.Content = "Таймер: " + score.ToString("#.#") + "сек";
+            Timer.Content = "Таймер: " + score.ToString("#.#") + "сек ";
             UserHitBox = new Rect(Canvas.GetLeft(User), Canvas.GetTop(User), User.Width, User.Height);
             if (Left == true && Canvas.GetLeft(User) > 0)
             {
                 Canvas.SetLeft(User, Canvas.GetLeft(User) - userSpeed);
             }
-            if (Right == true && Canvas.GetLeft(User) + 90 > Application.Current.MainWindow.Width) 
+            if (Right == true && Canvas.GetLeft(User) + 90 < Application.Current.MainWindow.Width) 
             {
                 Canvas.SetLeft(User, Canvas.GetLeft(User) + userSpeed);
             }
@@ -149,7 +149,7 @@ namespace SuperDrive
             }
         }
 
-        private void MyKeyDown(object sender, KeyEventArgs e) //перенести в отдельный класс
+        private void MyKeyDown(object sender, KeyEventArgs e) 
         {
             if (e.Key == Key.Left)
             {
@@ -161,7 +161,7 @@ namespace SuperDrive
             }
         }
 
-        private void MyKeyUp(object sender, KeyEventArgs e) //перенести в отдельный класс
+        private void MyKeyUp(object sender, KeyEventArgs e) 
         {
             if (e.Key == Key.Left)
             {
@@ -177,7 +177,7 @@ namespace SuperDrive
             }
         }
 
-        private void StartGame() //перенести в отдельный класс
+        private void StartGame() 
         {
             speed = 8;
             GameTimer.Start();
@@ -188,7 +188,7 @@ namespace SuperDrive
             PowerMode = false;
 
             score = 0;
-            Timer.Content = "Таймер: 0 cек";
+            Timer.Content = "Таймер: 0 cек ";
             UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Cyan.png"));
             CoinPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Coin.png"));
             User.Fill = UserPicture;
@@ -197,7 +197,7 @@ namespace SuperDrive
             {
                 if((string)x.Tag == "Car")
                 {
-                    Canvas.SetTop(x, (random.Next(100, 400)* -1));
+                    Canvas.SetTop(x, (random.Next(100, 400) * -1));
                     Canvas.SetLeft(x, random.Next(0, 430));
                     ChangeCars(x);
                
@@ -210,7 +210,7 @@ namespace SuperDrive
             ItemRemove.Clear();
         }
 
-        private void ChangeCars(Rectangle car) //перенести в отдельный класс
+        private void ChangeCars(Rectangle car)
         {
             numberCar = random.Next(1, 6);
             ImageBrush carPicture = new ImageBrush();
@@ -225,13 +225,22 @@ namespace SuperDrive
                 case 3:
                     carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Yellow.png"));
                     break;
+                case 4:
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Green.png"));
+                    break;
+                case 5:
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Seroburomaline.png"));
+                    break;
+                case 6:
+                    carPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Wheat.png"));
+                    break;
             }
             car.Fill = carPicture;
-            Canvas.SetTop(car, (random.Next(100, 400)));
+            Canvas.SetTop(car, (random.Next(100, 400)* -1));
             Canvas.SetLeft(car, random.Next(0, 430));
         }
 
-        private void PowerUp() //перенести в отдельный класс
+        private void PowerUp() 
         {
             i += .5;
             if (i < 4)
@@ -249,11 +258,20 @@ namespace SuperDrive
                 case 3:
                     UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Yellow.png"));
                     break;
+                case 4:
+                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Green.png"));
+                    break;
+                case 5:
+                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Seroburomaline.png"));
+                    break;
+                case 6:
+                    UserPicture.ImageSource = new BitmapImage(new Uri("C:/Users/borge/source/repos/SuperDrive/SuperDrive/Picture/Wheat.png"));
+                    break;
             }
             MyCanvas.Background = Brushes.Lime;
         }
 
-        private void MakeStart() //перенести в отдельный класс
+        private void MakeStart()
         {
             Rectangle newCoin = new Rectangle
             {
